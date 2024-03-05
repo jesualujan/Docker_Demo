@@ -23,4 +23,5 @@ RUN npm install
 COPY . ./
 
 # Establece el comando predeterminado a ejecutar cuando se inicia el contenedor.
-CMD ["node" , "index.js"]
+#CMD ["node" , "index.js"]
+CMD ["npm", "run", "dev"]
