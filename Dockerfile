@@ -22,6 +22,10 @@ RUN npm install
 # Esto va a incluir la aplicación de Node.js y todos los archivos necesarios para ejecutarla (nuestra aplicación)
 COPY . ./
 
+# EXPONER EL PUERTO DE NUESTRA APLICACIÓN
+# EXPOSE 3000
+ENV PORT 3000
+EXPOSE $PORT
 # Establece el comando predeterminado a ejecutar cuando se inicia el contenedor.
 #CMD ["node" , "index.js"]
 CMD ["npm", "run", "dev"]
