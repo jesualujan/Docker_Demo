@@ -1,0 +1,15 @@
+version: "3"
+services: 
+  node-app:
+    build: .
+    #image: mongo
+    ports: 
+     - "3000:3000"
+     # - "27017:27017" # for mongodb image
+     # - "4000:4000" # for nextjs image 
+    volumes:
+      - ./:/app
+      - /app/node_modules # pequeño hack para no subir node_modules (volumen anonimo)
+    environment:
+      - PORT=3000
+      # - PORT_BACKEND = 4000
